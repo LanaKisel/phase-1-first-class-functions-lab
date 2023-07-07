@@ -1,17 +1,17 @@
 // Code your solution in this file!
 const returnFirstTwoDrivers = function(names){
-    names = ['Antonia', 'Nuru', 'Amari', 'Mo'];
+    //names = ['Antonia', 'Nuru', 'Amari', 'Mo'];
     const newNames = [...names] 
     return newNames.slice(0,2)
 }
-returnFirstTwoDrivers();
+//returnFirstTwoDrivers();
 
 const returnLastTwoDrivers = function (names) {
- names = ['Antonia', 'Nuru', 'Amari', 'Mo']
+ //names = ['Antonia', 'Nuru', 'Amari', 'Mo']
  const lastDrivers = [...names]
  return lastDrivers.slice(-2)
 }
-returnLastTwoDrivers();
+//returnLastTwoDrivers();
 
 const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers]
 
@@ -32,10 +32,12 @@ const fareTripler = (multiplier) => {
 fareTripler(8)
 
 function selectDifferentDrivers(names, func) {
+    names = ['Antonia', 'Nuru', 'Amari', 'Mo'];
+    const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers]
     if (func === selectingDrivers[0]) {
-        return returnFirstTwoDrivers()
+        return returnFirstTwoDrivers(names)
     } else if (func === selectingDrivers[1]) {
-        return returnLastTwoDrivers()
+        return returnLastTwoDrivers(names)
     }
 }
-selectDifferentDrivers();
+//selectDifferentDrivers();
